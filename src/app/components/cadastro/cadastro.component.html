@@ -1,0 +1,29 @@
+<div class="cadastro-component">
+	<div class="rect-back"></div>
+  <div class="rect-front"></div>
+	<mat-card class="cadastro-box" >
+		<mat-card-header>
+			<mat-card-title>Cadastre-se</mat-card-title>
+		</mat-card-header>
+		<form class="form-content" [formGroup]="modelForm">
+			<mat-card-content>
+				<mat-form-field class = "tp-full-width">
+					<input matInput type="text" placeholder="Nome de usuário" formControlName="username" required/>
+				</mat-form-field>
+				<mat-form-field class = "tp-full-width">
+					<input matInput type="email" placeholder="Email" formControlName="email" required/>
+				</mat-form-field>
+				<mat-form-field class = "tp-full-width">
+					<input matInput type="password" placeholder="Senha" formControlName="password" required/>
+				</mat-form-field>
+				<mat-form-field class = "tp-full-width">
+					<input matInput type="number" placeholder="Telefone" formControlName="phone" required/>
+				</mat-form-field>
+				<mat-form-field class = "tp-full-width">
+					<input matInput type="date" placeholder="Data de Nascimento" formControlName="dataNasc" required/>
+				</mat-form-field>
+			</mat-card-content>
+			<button (click)="onClickBtnRegister()" mat-flat-button color="primary" >Cadastrar</button>
+		</form>
+	</mat-card>
+</div>

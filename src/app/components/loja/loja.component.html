@@ -1,0 +1,13 @@
+<div class="loja-component">
+<!-- 
+	<div class="firstArrow"></div>
+  <div class="secondArrow"></div>
+  <div class="thirdArrow"></div> -->
+  <div class="rect back"></div>
+  <div class="rect front"></div>
+
+	<div *ngIf="isLogged()" class="product-box">
+		<!-- <app-product-card [product]="produto"></app-product-card> -->
+		<app-product-card *ngFor="let product of produtos" [product]="product"></app-product-card>
+	</div>
+</div>

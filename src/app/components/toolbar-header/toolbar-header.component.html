@@ -1,0 +1,18 @@
+<div class="toolbar-header">
+	<mat-toolbar color="primary">
+   	<img  class="logo btnPointer" src="assets/img/bug-icon.png" (click)="onClickTitle()"/>
+  	<span class="btnPointer"(click)="onClickTitle()" >Glitch Store</span>
+    <span class="example-fill-remaining-space"></span>
+    <div class="actions">
+				<button *ngIf="!isLoginPage()" mat-raised-button color="basic" (click)="onClickLogin()">
+          <span *ngIf="!isLogged(); else btnLogout">Login</span>
+          <ng-template #btnLogout><span >Logout</span></ng-template>
+        </button>
+				<button *ngIf="isLoginPage()" mat-raised-button color="basic" (click)="onClickRegister()">Cadastrar-se</button>
+        <button *ngIf="isLogged();" mat-raised-button color="basic" [matBadge]="qtdBadges" [matBadgeHidden]="showBadges()" matBadgeColor="accent"
+        (click)="onClickShopping()">
+          <mat-icon>shopping_cart</mat-icon>
+        </button>
+    </div>
+  </mat-toolbar>
+</div>

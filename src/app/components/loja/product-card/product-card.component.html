@@ -1,0 +1,35 @@
+<div>
+	<mat-card class="product-element">
+
+		<mat-card-header>
+    	<mat-card-title>{{product.name}}</mat-card-title>
+    	<mat-card-subtitle>{{product.title}}</mat-card-subtitle>
+  	</mat-card-header>
+  	<img mat-card-image [src]="product.photo" alt="Foto do produto" />
+
+	  <mat-card-content>
+	  	<table class="table-card-content">
+	  		<tbody>
+	  			<tr>
+	  				<td><label>R$ </label></td>
+	  				<td><span>{{product.price}}</span></td>
+	  			</tr>
+	  			<tr>
+	  				<td><label>Estagio: </label></td>
+	  				<td><span>{{product.stage}}</span></td>
+	  			</tr>
+	  			<tr>
+	  				<td><label>Atributo: </label></td>
+	  				<td><span>{{product.attributeType}}</span></td>
+	  			</tr>
+	  		</tbody>
+	  	</table>
+	  </mat-card-content>
+
+	  <mat-card-actions>
+	    <button mat-flat-button class="btn-purchase" (click)="onClickPurchase()">Adicionar +</button>
+	    <button mat-flat-button class="btn-detail" (click)="onClickDetail()">Detalhes</button>
+	  </mat-card-actions>
+
+	</mat-card>
+</div>

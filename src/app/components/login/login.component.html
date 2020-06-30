@@ -1,0 +1,29 @@
+<div class="login-component">
+  <div class="circle-back"></div>
+	<div class="login-box">
+		<mat-card>
+		  <mat-card-header>
+		    <mat-card-title>Log in</mat-card-title>
+		    <span class="small-info">Ex: usuario: h, senha: h</span>
+		  </mat-card-header>
+			<form [formGroup]="modelForm">
+				<mat-card-content >
+					<mat-form-field class = "tp-full-width" >
+						<input 	matInput placeholder="Usuário" 
+									 	formControlName="username"
+									 	name="inputUsername" required />
+					</mat-form-field>
+					<mat-form-field class = "tp-full-width">
+						<input 	matInput type="password" placeholder="Senha"
+									 	formControlName="password"
+									 	name="inputPassword" required />
+					</mat-form-field>
+				</mat-card-content>
+				<button 	mat-flat-button color="primary" class="btn-login"
+									(click)="onClickLogin()">Entrar</button>
+				<button mat-button color="primary" 
+								(click)="onClickBtnRegister()">Cadastrar</button>
+			</form>
+		</mat-card>
+	</div>
+</div>

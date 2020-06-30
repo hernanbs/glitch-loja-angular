@@ -1,0 +1,41 @@
+<div>
+	<div class="detail-component">
+		<div class="content">	
+			<img mat-card-image [src]="data.product.photo" alt="Foto do produto" />
+		</div>
+		<div class="content">
+			<table class="table-card-content">
+				<tbody>
+					<tr>
+						<td class="txtlabel"><label>Nome </label></td>
+						<td class="txtspan"><span>{{data.product.name}}</span></td>
+					</tr>
+					<tr>
+						<td class="txtlabel"><label>Titulo </label></td>
+						<td class="txtspan"><span>{{data.product.title}}</span></td>
+					</tr>
+					<tr>
+						<td class="txtlabel"><label>Estagio: </label></td>
+						<td class="txtspan"><span>{{data.product.stage}}</span></td>
+					</tr>
+					<tr>
+						<td class="txtlabel"><label>Atributo: </label></td>
+						<td class="txtspan"><span>{{data.product.attributeType}}</span></td>
+					</tr>
+					<tr>
+						<td class="txtlabel"><label>R$ </label></td>
+						<td class="txtspan"><span>{{data.product.price}}</span></td>
+					</tr>
+					<tr>
+						<td class="txtlabel"><label>Descrição </label></td>
+						<td class="txtspan"><span>{{data.product.description}}</span></td>
+					</tr>
+					<!-- <tr></tr> -->
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<div class="btnClose">
+		<button mat-button mat-dialog-close>Fechar</button>
+	</div>
+</div>

@@ -1,0 +1,38 @@
+<div class="carrinho-component">
+	<div class="rect-back"></div>
+  <div class="rect-front"></div>
+	<mat-card>
+	  <mat-card-header>
+	    <mat-card-title>Carrinho</mat-card-title>
+	    <mat-card-subtitle>Lista de produtos adicionados</mat-card-subtitle>
+	  </mat-card-header>
+		<mat-selection-list #selectProduct [multiple]="false">
+		 	<mat-list-option class="product-item" *ngFor="let produto of produtos async">
+				<div>
+				 	<img mat-card-image [src]="produto.photo" alt="Foto do produto" />
+<!-- 				 	<span>{{produto.name}}</span>
+				 	<span>{{produto.title}}</span>
+				 	<span>{{produto.stage}}</span>
+				 	<span>{{produto.attributeType}}</span> -->
+		 			
+<!-- 		 			<p>1 {{produto.name}}</p>
+				 	<p>1 {{produto.title}}</p>
+				 	<p>1 {{produto.stage}}</p>
+				 	<p>1 {{produto.attributeType}}</p> -->
+
+				 	<table class="table-grid">
+				 		<tr>
+				 			<td><p>1 {{produto.name}}</p></td>
+				 			<td><p>1 {{produto.title}}</p></td>
+				 		</tr>
+				 		<tr>
+				 			<td><p>1 {{produto.stage}}</p></td>
+				 			<td><p>1 {{produto.attributeType}}</p></td>
+				 		</tr>
+				 	</table>
+			 	</div>
+			</mat-list-option>
+		</mat-selection-list>	
+	</mat-card>
+</div>
+
